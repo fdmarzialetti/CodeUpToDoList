@@ -1,5 +1,6 @@
 package com.example.toDoList.models;
 
+import com.example.toDoList.DTO.TaskDTO;
 import com.example.toDoList.enums.TaskStatus;
 import jakarta.persistence.*;
 
@@ -20,6 +21,12 @@ public class Task {
         this.tittle = tittle;
         this.description = description;
         this.status = TaskStatus.PENDING;
+    }
+
+    public Task(TaskDTO taskDTO){
+        this.tittle = taskDTO.getTittle();
+        this.description = taskDTO.getDescription();
+        this.status = taskDTO.getStatus();
     }
 
     public long getId() {

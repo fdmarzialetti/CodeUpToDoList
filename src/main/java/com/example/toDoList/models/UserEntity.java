@@ -1,11 +1,14 @@
 package com.example.toDoList.models;
 
+import com.example.toDoList.DTO.UserEntityDTO;
+import com.example.toDoList.DTO.UserEntityPostDTO;
 import com.fasterxml.jackson.annotation.JsonAnyGetter;
 import jakarta.persistence.*;
 import org.apache.catalina.User;
 
 import java.util.HashSet;
 import java.util.Set;
+import java.util.stream.Collectors;
 
 @Entity
 public class UserEntity {
@@ -24,6 +27,12 @@ public class UserEntity {
         this.username = username;
         this.password = password;
         this.email = email;
+    }
+
+    public UserEntity(UserEntityPostDTO userEntityPostDTO){
+        this.username = userEntityPostDTO.getUsername();
+        this.password = userEntityPostDTO.getPassword();
+        this.email= userEntityPostDTO.getEmail();
     }
 
     public long getId() {
