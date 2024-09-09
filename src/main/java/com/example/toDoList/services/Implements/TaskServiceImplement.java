@@ -12,7 +12,6 @@ import com.example.toDoList.services.TaskService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 @Service
@@ -28,11 +27,11 @@ public class TaskServiceImplement implements TaskService {
     }
 
     public TaskDTO getTaskById(long id){
-        return taskRepositorie.findById(id).map(t->new TaskDTO(t)).orElseThrow(()->new TaskNotFound("The task with "+id+" does not exist."));
+        return taskRepositorie.findById(id).map(t->new TaskDTO(t)).orElseThrow(()->new TaskNotFound("The task with id "+id+" does not exist."));
     }
 
     public ResponseEntity<String> addTaskToUser(TaskPostDTO taskPostDTO,long id){
-        UserEntity user = userEntityRepositorie.findById(id).orElseThrow(()->new UserEntityNotFound("The user with "+id+" does not exist."));
+        UserEntity user = userEntityRepositorie.findById(id).orElseThrow(()->new UserEntityNotFound("The user with id "+id+" does not exist."));
         Task task = new Task(taskPostDTO);
         user.addTask(task);
         taskRepositorie.save(task);

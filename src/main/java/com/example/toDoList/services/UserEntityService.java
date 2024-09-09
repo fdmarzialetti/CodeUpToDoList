@@ -2,10 +2,10 @@ package com.example.toDoList.services;
 
 import com.example.toDoList.DTO.UserEntityDTO;
 import com.example.toDoList.DTO.UserEntityPostDTO;
-import com.example.toDoList.models.UserEntity;
+
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.*;
+
 
 import java.util.List;
 

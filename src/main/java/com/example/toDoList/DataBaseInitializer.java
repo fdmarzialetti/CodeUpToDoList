@@ -1,13 +1,10 @@
 package com.example.toDoList;
-
 import com.example.toDoList.models.Task;
 import com.example.toDoList.models.UserEntity;
 import com.example.toDoList.repositories.TaskRepositorie;
 import com.example.toDoList.repositories.UserEntityRepositorie;
-import jakarta.persistence.Entity;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
-import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Component;
 
 @Component

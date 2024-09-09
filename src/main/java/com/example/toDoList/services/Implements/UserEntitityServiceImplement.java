@@ -23,7 +23,7 @@ public class UserEntitityServiceImplement implements UserEntityService {
 
     @Override
     public UserEntityDTO getUserEntityById(long id) {
-        return userEntityRepositorie.findById(id).map(ue->new UserEntityDTO(ue)).orElseThrow(()->new UserEntityNotFound("The user with "+id+" does not exist."));
+        return userEntityRepositorie.findById(id).map(ue->new UserEntityDTO(ue)).orElseThrow(()->new UserEntityNotFound("The user with id "+id+" does not exist."));
 
     }
 
