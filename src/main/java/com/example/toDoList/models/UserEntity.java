@@ -18,7 +18,7 @@ public class UserEntity {
     private String username;
     private String password;
     private String email;
-    @OneToMany(mappedBy="userEntity")
+    @OneToMany(mappedBy="userEntity",cascade = CascadeType.REMOVE)
     private Set<Task> tasks = new HashSet<>();
 
     public UserEntity(){};

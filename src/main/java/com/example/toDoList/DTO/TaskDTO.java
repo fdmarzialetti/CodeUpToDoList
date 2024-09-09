@@ -13,12 +13,14 @@ public class TaskDTO {
     private String tittle;
     private String description;
     private TaskStatus status;
+    private long userID;
 
     public TaskDTO(Task task){
         this.id = task.getId();
         this.tittle = task.getTittle();
         this.description = task.getDescription();
         this.status = task.getStatus();
+        this.userID = task.getUserEntity().getId();
     }
 
     public long getId() {
@@ -35,5 +37,8 @@ public class TaskDTO {
 
     public TaskStatus getStatus() {
         return status;
+    }
+    public long getUserID() {
+        return userID;
     }
 }
