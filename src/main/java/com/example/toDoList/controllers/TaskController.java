@@ -1,15 +1,7 @@
 package com.example.toDoList.controllers;
-
 import com.example.toDoList.DTO.TaskDTO;
 import com.example.toDoList.DTO.TaskPostDTO;
-import com.example.toDoList.DTO.UserEntityDTO;
-import com.example.toDoList.DTO.UserEntityPostDTO;
-import com.example.toDoList.models.Task;
-import com.example.toDoList.models.UserEntity;
-import com.example.toDoList.repositories.TaskRepositorie;
-import com.example.toDoList.repositories.UserEntityRepositorie;
 import com.example.toDoList.services.TaskService;
-import com.example.toDoList.services.UserEntityService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
